@@ -23,7 +23,7 @@ const Analytics = () => {
       icon: "mdi-arrow-top-right",
     },
   ];
-  const [duration, setDuration] = useState("Daily");
+  const [duration, setDuration] = useState("Weekly");
   const cardInfo = [
     { title: "Card Number", value: "2651 4762 2212 2386" },
     { title: "Expiration Date", value: "22/17" },
@@ -36,7 +36,7 @@ const Analytics = () => {
           Optimize performances
         </span>
         <p className="h-full text-lg font-thin">
-          Analytics <span className="font-extralight text-[12px]">Dec 22</span>
+          Analytics <span className="font-extralight text-[12px]">from Jan</span>
         </p>
         <div className="w-full h-10 p-1 my-5 flex bg-white text-black rounded-full">
           <span
@@ -44,14 +44,14 @@ const Analytics = () => {
               duration === "Daily" ? "bg-black text-white" : null
             } w-1/2 h-full flex justify-center items-center rounded-full `}
             onClick={() => setDuration("Daily")}>
-            Daily
+            Weekly
           </span>{" "}
           <span
             className={`${
               duration === "Weekly" ? "bg-black text-white" : null
             } w-1/2 h-full flex justify-center items-center rounded-full`}
             onClick={() => setDuration("Weekly")}>
-            Weekly
+            Monthly
           </span>
         </div>
         <p className="h-full flex flex-col text-lg font-thin">
@@ -72,14 +72,12 @@ const Analytics = () => {
           </span>
         </div>
         <div className="scroll__hide flex justify-between items-center overflow-x-auto">
-          {/* {analytics.map((analytic) => 
-          ( <AnalyticStats spent={"h-[60%]"} saved={"h-[40%]"} week={"1st"} key={analytic.week} />)
-        )} */}
-          <AnalyticStats spent={"h-[20%]"} saved={"h-[80%]"} week={"1st"} />
-          <AnalyticStats spent={"h-[33%]"} saved={"h-[67%]"} week={"2nd"} />
-          <AnalyticStats spent={"h-[60%]"} saved={"h-[40%]"} week={"3rd"} />
-          <AnalyticStats spent={"h-[70%]"} saved={"h-[30%]"} week={"4th"} />
-          <AnalyticStats spent={"h-[22%]"} saved={"h-[78%]"} week={"5th"} />
+       
+          <AnalyticStats spent={"h-[20%]"} saved={"h-[30%]"} week={"1st"} />
+          <AnalyticStats spent={"h-[10%]"} saved={"h-[20%]"} week={"2nd"} />
+          <AnalyticStats spent={"h-[5%]"} saved={"h-[10%]"} week={"3rd"} />
+          <AnalyticStats spent={"h-[40%]"} saved={"h-[30%]"} week={"4th"} />
+          <AnalyticStats spent={"h-[22%]"} saved={"h-[10%]"} week={"5th"} />
         </div>
       </div>
 

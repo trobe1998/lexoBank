@@ -1,5 +1,3 @@
-// import "./globals.css";
-// import "../assets/mdi/css/materialdesignicons.min.css";
 
 import { NavBar } from "@components";
 
