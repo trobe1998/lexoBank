@@ -18,11 +18,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/lexo-Bank-logo-lighrt-blue.png" />
       </head>
-      <body className="relative">
-        <NavBar />
-        {children}
-        <Footer />
-      </body>
+      <body className="relative">{children}</body>
     </html>
   );
 }

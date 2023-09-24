@@ -8,7 +8,7 @@ const Wallet = () => {
   const { wallet } = useParams();
   let n = Number(wallet)
 
-  console.log(n);
+  console.log(cardData[n]);
   let arr = [
     {
       title: "Deposit",
@@ -26,7 +26,7 @@ const Wallet = () => {
 
   return (
     <div className="">
-      <WalletBalance card={cardData[n]} />
+      <WalletBalance cardDetail={cardData[n]} />
       <div className="flex justify-around padding-y">
         {arr.map((detail) => (
           <CCuse detail={detail} key={detail.title} />

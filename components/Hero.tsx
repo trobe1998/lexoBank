@@ -3,8 +3,10 @@
 import Image from "next/image";
 
 import { CustomButton } from "@components";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter()
   const handleScroll = () => {
     const nextSection = document.getElementById("discover");
 
@@ -27,7 +29,7 @@ const Hero = () => {
         <CustomButton
           title="Open an Account"
           containerStyles="w-44 bg-white text-blue-500 rounded-full mt-6"
-          handleClick={handleScroll}
+          handleClick={()=> router.push('/auth/signUp')}
         />
       </div>
       <div className="hero__image-container hidden lg:flex ">
