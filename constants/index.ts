@@ -158,18 +158,18 @@ export const promotions = [
     head: "Unleash your business potential with Straight2Bank",
     textBody:
       "Elevate your banking experience with Straight2Bank, our award-winning digital banking platform",
-    imgUrl: "/face2.jpg",
+    imgUrl: "/bnk4.avif",
   },
   {
     head: "Renewing your travel insurance is a breeze with SC Mobile",
     textBody:
       "You get your policy document in t working day when purchased or renewed using SO Mobile App",
-    imgUrl: "/face20.jpg",
+    imgUrl: "/bnk5.avif",
   },
   {
     head: "The Good Life® Privileges",
     textBody: "Enjoy incredible privileges with your SO credit/debit card",
-    imgUrl: "/face7.jpg",
+    imgUrl: "/bnk6.jpg",
   },
 ];
 
@@ -219,8 +219,8 @@ export const Activities = [
 
 export const cardData = [
   {
-    id:1,
-    title: "Master",
+    id:0,
+    title: "Master card",
     agency: "Columbus Agency",
     balance: "$79.00",
     bank: "Lexo Bank",
@@ -230,8 +230,8 @@ export const cardData = [
     logo: "/Mc.png",
   },
   {
-    id:2,
-    title: "Visa",
+    id:1,
+    title: "Visa card",
     agency: "Tomil Agency",
     balance: "$25.00",
     bank: "Regions Bank",
