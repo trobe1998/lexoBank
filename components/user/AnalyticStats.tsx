@@ -18,7 +18,7 @@ export const AnalyticStats = ({spent, saved, week}:{spent:string, saved:string, 
         <div className={`w-4 ${spent} bg-slate-200 rounded-t-2xl`}/>
         <div className={`w-4 ${saved} bg-slate-500 rounded-t-2xl`} />
       </div>
-      <span className="text-[11px] font-semibold">{week} week</span>
+      <span className="text-[11px] font-light">{week}</span>
     </div>
   );
 };

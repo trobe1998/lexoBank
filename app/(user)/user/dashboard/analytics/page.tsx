@@ -36,21 +36,22 @@ const Analytics = () => {
           Optimize performances
         </span>
         <p className="h-full text-lg font-thin">
-          Analytics <span className="font-extralight text-[12px]">from Jan</span>
+          Analytics{" "}
+          <span className="font-extralight text-[12px]">mid-year (2022)</span>
         </p>
         <div className="w-full h-10 p-1 my-5 flex bg-white text-black rounded-full">
           <span
             className={`${
-              duration === "Daily" ? "bg-black text-white" : null
+              duration === "Weekly" ? "bg-black text-white" : null
             } w-1/2 h-full flex justify-center items-center rounded-full `}
-            onClick={() => setDuration("Daily")}>
+            onClick={() => setDuration("Weekly")}>
             Weekly
           </span>{" "}
           <span
             className={`${
-              duration === "Weekly" ? "bg-black text-white" : null
+              duration === "Monthly" ? "bg-black text-white" : null
             } w-1/2 h-full flex justify-center items-center rounded-full`}
-            onClick={() => setDuration("Weekly")}>
+            onClick={() => setDuration("Monthly")}>
             Monthly
           </span>
         </div>
@@ -71,14 +72,65 @@ const Analytics = () => {
             outcome
           </span>
         </div>
-        <div className="scroll__hide flex justify-between items-center overflow-x-auto">
-       
-          <AnalyticStats spent={"h-[20%]"} saved={"h-[30%]"} week={"1st"} />
-          <AnalyticStats spent={"h-[10%]"} saved={"h-[20%]"} week={"2nd"} />
-          <AnalyticStats spent={"h-[5%]"} saved={"h-[10%]"} week={"3rd"} />
-          <AnalyticStats spent={"h-[40%]"} saved={"h-[30%]"} week={"4th"} />
-          <AnalyticStats spent={"h-[22%]"} saved={"h-[10%]"} week={"5th"} />
-        </div>
+        {duration === "Weekly" ? (
+          <div className="scroll__hide flex justify-between items-center overflow-x-auto">
+            {" "}
+            <AnalyticStats
+              spent={"h-[20%]"}
+              saved={"h-[30%]"}
+              week={"1st week"}
+            />
+            <AnalyticStats
+              spent={"h-[50%]"}
+              saved={"h-[20%]"}
+              week={"2nd week"}
+            />
+            <AnalyticStats
+              spent={"h-[45%]"}
+              saved={"h-[70%]"}
+              week={"3rd week"}
+            />
+            <AnalyticStats
+              spent={"h-[40%]"}
+              saved={"h-[30%]"}
+              week={"4th week"}
+            />
+            <AnalyticStats spent={"h-[22%]"} saved={"h-[10%]"} week={"5th"} />{" "}
+          </div>
+        ) : (
+          <div className="scroll__hide flex justify-between items-center overflow-x-auto">
+            <AnalyticStats
+              spent={"h-[40%]"}
+              saved={"h-[60%]"}
+              week={"1st month"}
+            />
+            <AnalyticStats
+              spent={"h-[35%]"}
+              saved={"h-[25%]"}
+              week={"2nd month"}
+            />
+            <AnalyticStats
+              spent={"h-[50%]"}
+              saved={"h-[30%]"}
+              week={"3rd month"}
+            />
+            <AnalyticStats
+              spent={"h-[62%]"}
+              saved={"h-[10%]"}
+              week={"4th month"}
+            />
+            <AnalyticStats
+              spent={"h-[52%]"}
+              saved={"h-[30%]"}
+              week={"5th month"}
+            />
+            <AnalyticStats
+              spent={"h-[45%]"}
+              saved={"h-[10%]"}
+              week={"6th month"}
+            />
+          </div>
+        )}
       </div>
 
       <RecentActivities />
