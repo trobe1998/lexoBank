@@ -5,10 +5,15 @@ import {
   RecentActivities,
   WalletBalance,
 } from "@components";
-import { analytics } from "@constants";
+import { User } from "@constants";
 import { useState } from "react";
 
 const Analytics = () => {
+  let balance = 0;
+  for (let i = 0; i < User[0].cards.length; i++) {
+    balance = balance + User[0].cards[i].balance;
+  }
+
   let arr = [
     {
       title: "Deposit",
@@ -24,11 +29,7 @@ const Analytics = () => {
     },
   ];
   const [duration, setDuration] = useState("Weekly");
-  const cardInfo = [
-    { title: "Card Number", value: "2651 4762 2212 2386" },
-    { title: "Expiration Date", value: "22/17" },
-    { title: "CVV", value: "728" },
-  ];
+ 
   return (
     <div className="">
       <div className="flex flex-col justify-center padding-y">
@@ -57,7 +58,7 @@ const Analytics = () => {
         </div>
         <p className="h-full flex flex-col text-lg font-thin">
           <span className="font-extralight text-[12px]">Total Amount</span>{" "}
-          <span className="text-lg font-thin">$104.00</span>
+          <span className="text-lg font-thin">${balance}.00</span>
         </p>
       </div>
 

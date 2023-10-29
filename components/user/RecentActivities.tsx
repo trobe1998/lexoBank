@@ -1,5 +1,5 @@
 import { RecentActivity } from "@components";
-import {Activities} from "@constants"
+import {User} from "@constants"
 import React from "react";
 
 const RecentActivities = () => {
@@ -11,7 +11,7 @@ const RecentActivities = () => {
         <span>Recent Activity</span>{" "}
         <span className="text-[12px] font-thin">see All</span>
       </span>
-      {Activities.map((transaction) => (
+      {User[0].Tranasactions.map((transaction) => (
         <RecentActivity activity={transaction} key={transaction.desc} />
       ))}
     </div>

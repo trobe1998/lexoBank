@@ -19,6 +19,7 @@ import Promotion from "./Promotion";
 import { AnalyticStats } from "./user/AnalyticStats";
 import SendModal from "./user/SendModal";
 import Logout from "./user/Logout";
+import Msg from "./user/Msg";
 
 export {
   Hero,
@@ -39,6 +40,7 @@ export {
   WalletBalance,CCuse,
   Promotion,
   AnalyticStats,
-  SendModal, Logout
+  SendModal, Logout,
+  Msg
 
 };

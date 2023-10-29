@@ -1,21 +1,8 @@
 import { QuickTransactionCard } from "@components";
+import { User } from "@constants";
 import React from "react";
 
 const QuickTransactions = () => {
-  let arr = [
-    {
-      title:'Edison',
-      src:'/unknown.png'
-    }, {
-      title:'Jane',
-      src:'/unknown.png'
-    }, {
-      title:'Tommy',
-      src:'/unknown.png'
-    }, {
-      title:'Anastasia',
-      src:'/unknown.png'
-    }];
   return (
     <div className="flex flex-col justify-around h-28 padding-y">
       <span className="text-lg font-thin">Quick Transaction</span>
@@ -25,9 +12,9 @@ const QuickTransactions = () => {
         </div>
 
         <div className="scroll__hide h-full flex items-center overflow-x-auto overscroll-x-contain scroll-smooth">
-        {arr.map((transaction) => (
-          <QuickTransactionCard trn={transaction} key={transaction.title} />
-        ))}
+          {User[0].quickTransactions.map((transaction) => (
+            <QuickTransactionCard trn={transaction} key={transaction.title} />
+          ))}
         </div>
       </div>
     </div>
