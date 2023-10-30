@@ -1,6 +1,6 @@
 import NextAuth, { NextAuthOptions, Session } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import dbConnect from "@/libs/mongodb";
+// import dbConnect from "@/libs/mongodb";
 import User from "@/models/User";
 
 interface IUser {
