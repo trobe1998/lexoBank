@@ -24,11 +24,11 @@ const authOptions: NextAuthOptions = {
           password: string;
         };
         console.log(userId, password);
-        await dbConnect();
-        const user: any = await User.create({
-          username: "bassit",
-          email: "user@gmailcom",
-        });
+        // await dbConnect();
+        // const user: any = await User.create({
+        //   username: "bassit",
+        //   email: "user@gmailcom",
+        // });
 
         if (!user) {
           // return  new NextResponse("Error", {status:401});`
