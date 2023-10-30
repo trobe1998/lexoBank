@@ -1,5 +1,4 @@
 import { CCuse, RecentActivities, WalletBalance } from "@components";
-import { cardData } from "@constants";
 
 import React from "react";
 
@@ -19,12 +18,7 @@ const WalletDetail = () => {
     },
   ];
 
- 
-  return (
-    <div className="">
-     
-    </div>
-  );
+  return <div className=""></div>;
 };
 
 export default WalletDetail;
