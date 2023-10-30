@@ -8,7 +8,7 @@ interface ICard {
     id: number;
     title: string;
     agency: string;
-    balance: string;
+    balance: number;
     bank: string;
     card: string;
     expire: string;
@@ -22,7 +22,7 @@ const CCcard = ({ card }: ICard) => {
       <p className="font-semibold">{card.agency}</p>
       <p className="py-1 text-[12px] font-light">
         Balance <br />
-        <span className="p-0 font-bold text-2xl">{card.balance}</span>
+        <span className="p-0 font-bold text-2xl">${card.balance}.00</span>
       </p>
       <Image src={card.logo} alt="logo" width={50} height={5} />
       <p className="py-1 text-[11px] font-light">{card.bank}</p>
@@ -31,8 +31,8 @@ const CCcard = ({ card }: ICard) => {
       </p>
       <p className="py-2 text-[12px] font-light">
         Expiry Date {card.expire}{" "}
-        <Link className="rounded-full p-2 px-5 ml-2 text-white bg-black"
-         href={`/user/dashboard/${card.id}`}>
+        <Link className="rounded-full p-2 px-5 ml-2 text-white bg-cyan-900"
+         href={`/user/dashboard/${card.title.split(' ')[0]}`}>
           Edit
         </Link>
       </p>

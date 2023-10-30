@@ -4,18 +4,22 @@ import {
   RecentActivities,
   TotalBalance,
 } from "@components";
-import { cardData } from "@constants";
+import { User } from "@constants";
 import React from "react";
 
 const UserDashboard = () => {
-
   return (
     <div>
       <TotalBalance />
       <div>
-        <span className="text-lg font-thin">Card</span>
+        <span className="flex justify-between items-center py-2">
+          <span className="flex justify-between text-lg font-thin">Card</span>{" "}
+          <span className="flex justify-between text-sm font-thin cursor-pointer">
+            add card <i className="mdi mdi-plus"></i>
+          </span>
+        </span>
         <div className="scroll__hide h-full flex items-center overflow-x-auto scroll-smooth gap-2">
-          {cardData.map((data) => (
+          {User[0].cards.map((data) => (
             <CCcard card={data} key={data.logo} />
           ))}
         </div>
